@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+    <form method="post" action="{% url 'auth_login' %}">
+        {% csrf_token %}
+
+        <!--
+        <p>USERNAME:{{ form.username }}</p>
+        <p>Password:{{ form.password }}</p>
+        -->
+
+        <label>Username/Email/Contact: <input type="text" name="email_or_contact" /></label><br>
+        <label>Password: <input type="password" name="password" /></label><br>
+        <input type="submit" value="Login" />
+
+    </form>
+
+</body>
+</html>
